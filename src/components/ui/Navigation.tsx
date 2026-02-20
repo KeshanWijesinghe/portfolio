@@ -55,18 +55,12 @@ export function Navigation() {
       {/* Desktop Navigation */}
       <motion.nav
         className="fixed top-0 left-0 right-0 z-50 hidden lg:block"
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.5 }}
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
       >
         <div className="section-padding py-6">
-          <motion.div
-            className={cn(
-              "max-w-6xl mx-auto transition-all duration-300",
-              isScrolled ? "glass-card py-4 px-8" : "py-4",
-            )}
-            layout
-          >
+          <motion.div className="max-w-6xl mx-auto glass-card py-4 px-8" layout>
             <div className="flex items-center justify-between">
               {/* Logo */}
               <motion.button
@@ -129,18 +123,12 @@ export function Navigation() {
       {/* Mobile Navigation */}
       <motion.nav
         className="fixed top-0 left-0 right-0 z-50 lg:hidden"
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.5 }}
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
       >
         <div className="section-padding py-4">
-          <motion.div
-            className={cn(
-              "transition-all duration-300",
-              isScrolled ? "glass-card py-4 px-6" : "py-4",
-            )}
-            layout
-          >
+          <motion.div className="glass-card py-4 px-6" layout>
             <div className="flex items-center justify-between">
               {/* Logo */}
               <motion.button
@@ -239,9 +227,6 @@ export function Navigation() {
           )}
         </AnimatePresence>
       </motion.nav>
-
-      {/* Spacer for fixed navigation */}
-      <div className="h-20 lg:h-24" />
     </>
   );
 }

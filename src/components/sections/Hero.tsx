@@ -30,7 +30,7 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center section-padding overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center section-padding overflow-hidden">
       {/* Animated gradient background */}
       <motion.div
         className="absolute inset-0 opacity-30"
