@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-geist-sans: "Geist Sans", sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background-secondary;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border-secondary rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-foreground-tertiary;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-glass-bg backdrop-blur-md border border-glass-border;
+  }
+
+  .glass-card {
+    @apply glass rounded-2xl shadow-glass;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent-primary via-accent-secondary to-accent-tertiary bg-clip-text text-transparent;
+  }
+
+  .magnetic-hover {
+    @apply transition-transform duration-300 ease-out hover:animate-magnetic;
+  }
+
+  .btn-primary {
+    @apply glass-card px-6 py-3 text-sm font-medium text-foreground hover:bg-glass-border transition-all duration-300 magnetic-hover;
+  }
+
+  .section-padding {
+    @apply px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-20;
+  }
+
+  .section-spacing {
+    @apply py-16 sm:py-20 lg:py-24 xl:py-28;
+  }
+}
+
+/* Performance optimizations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
