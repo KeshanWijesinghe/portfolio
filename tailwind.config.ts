@@ -61,6 +61,7 @@ const config: Config = {
         "gradient-shift": "gradientShift 8s ease-in-out infinite",
         magnetic: "magnetic 0.3s ease-out",
         float: "float 3s ease-in-out infinite",
+        marquee: "marquee 30s linear infinite",
       },
       keyframes: {
         fadeIn: {
@@ -95,6 +96,10 @@ const config: Config = {
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-10px)" },
+        },
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
         },
       },
       backdropBlur: {

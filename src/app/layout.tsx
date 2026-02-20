@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff2",
+const geistSans = Inter({
+  subsets: ["latin"],
   variable: "--font-geist-sans",
-  weight: "100 900",
   display: "swap",
-  fallback: ["system-ui", "Arial", "sans-serif"],
-  preload: true,
 });
 
 export const metadata: Metadata = {

@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import profilePhoto from "../../images/a.png";
+import profilePhoto from "../../images/a1.png";
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { StaggerContainer, StaggerItem } from "@/components/ui/SectionWrapper";
