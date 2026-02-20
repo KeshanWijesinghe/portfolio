@@ -16,13 +16,9 @@ const navItems = [
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
-  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      setIsScrolled(scrollTop > 50);
-
       // Find active section
       const sections = navItems.map((item) => document.getElementById(item.id));
       const currentSection = sections.find((section) => {
