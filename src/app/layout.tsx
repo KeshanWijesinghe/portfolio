@@ -10,7 +10,7 @@ const geistSans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Your Name - Senior Frontend Engineer",
+  title: "Keshan Wijesinghe",
   description:
     "Modern portfolio showcasing cutting-edge web development and UI/UX design expertise.",
   keywords: [
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     "web development",
     "ui/ux",
   ],
-  authors: [{ name: "Your Name" }],
-  creator: "Your Name",
-  publisher: "Your Name",
+  authors: [{ name: "Keshan Wijesinghe" }],
+  creator: "Keshan Wijesinghe",
+  publisher: "Keshan Wijesinghe",
   formatDetection: {
     email: false,
     address: false,
@@ -34,17 +34,17 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Your Name - Senior Frontend Engineer",
+    title: "Keshan Wijesinghe",
     description:
       "Modern portfolio showcasing cutting-edge web development and UI/UX design expertise.",
     url: "https://yourportfolio.com",
-    siteName: "Your Portfolio",
+    siteName: "Keshan Wijesinghe Portfolio",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Your Name Portfolio",
+        alt: "Keshan Wijesinghe Portfolio",
       },
     ],
     locale: "en_US",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Your Name - Senior Frontend Engineer",
+    title: "Keshan Wijesinghe - Senior Frontend Engineer",
     description:
       "Modern portfolio showcasing cutting-edge web development and UI/UX design expertise.",
     images: ["/og-image.jpg"],
@@ -95,7 +95,6 @@ export default function RootLayout({
         <meta name="theme-color" content="#0a0a0a" />
       </head>
       <body
-        suppressHydrationWarning
         className={cn(
           geistSans.variable,
           "font-sans antialiased overflow-x-hidden",
