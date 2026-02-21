@@ -56,7 +56,12 @@ export function Hero() {
 
       <div className="w-full max-w-6xl mx-auto relative z-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-16">
         {/* Left — Text content */}
-        <StaggerContainer className="flex-1 text-center lg:text-left">
+        <motion.div
+          className="flex-1"
+          initial="hidden"
+          animate="visible"
+        >
+        <StaggerContainer className="text-center lg:text-left">
           <StaggerItem>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 tracking-tight">
               <span className="block text-foreground">Undergraduate</span>
@@ -138,8 +143,7 @@ export function Hero() {
               ))}
             </div>
           </StaggerItem>
-        </StaggerContainer>
-
+        </StaggerContainer>        </motion.div>
         {/* Right — Photo */}
         <motion.div
           className="flex-shrink-0 flex items-end justify-center w-64 sm:w-72 lg:w-80 xl:w-96"

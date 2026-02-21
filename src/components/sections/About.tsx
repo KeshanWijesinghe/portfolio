@@ -12,9 +12,9 @@ import {
 const highlights = [
   {
     icon: User,
-    title: "5+ Years Experience",
+    title: "1+ Year Experience",
     description:
-      "Building scalable web applications and leading frontend architectures.",
+      "Building scalable web applications, leading frontend architectures and mobile apps.",
   },
   {
     icon: Target,
@@ -54,13 +54,13 @@ export function About() {
                 <p>
                   I'm a passionate{" "}
                   <span className="text-accent-primary font-medium">
-                    Senior Frontend Engineer
+                    Undergraduate Software Engineer
                   </span>{" "}
                   and{" "}
                   <span className="text-accent-secondary font-medium">
                     UI/UX Designer
                   </span>{" "}
-                  with over 5 years of experience crafting exceptional digital
+                  with over 1 year of experience crafting exceptional digital
                   experiences.
                 </p>
 
