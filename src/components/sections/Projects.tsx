@@ -36,7 +36,7 @@ const projects: Project[] = [
     liveUrl: "https://example-ecommerce.vercel.app",
     githubUrl: "https://github.com/username/ecommerce",
     featured: true,
-    gridClass: "col-span-2 row-span-2",
+    gridClass: "",
     year: "2024",
   },
   {
@@ -50,7 +50,7 @@ const projects: Project[] = [
     liveUrl: "https://example-design-system.vercel.app",
     githubUrl: "https://github.com/username/design-system",
     featured: true,
-    gridClass: "col-span-1 row-span-1",
+    gridClass: "",
     year: "2024",
   },
   {
@@ -64,7 +64,7 @@ const projects: Project[] = [
     liveUrl: "https://example-ai-dashboard.vercel.app",
     githubUrl: "https://github.com/username/ai-dashboard",
     featured: true,
-    gridClass: "col-span-1 row-span-1",
+    gridClass: "",
     year: "2023",
   },
   {
@@ -78,7 +78,7 @@ const projects: Project[] = [
     liveUrl: "https://example-banking.app",
     githubUrl: "https://github.com/username/banking-app",
     featured: false,
-    gridClass: "col-span-1 row-span-2",
+    gridClass: "",
     year: "2023",
   },
   {
@@ -92,7 +92,7 @@ const projects: Project[] = [
     liveUrl: "https://example-tasks.vercel.app",
     githubUrl: "https://github.com/username/task-management",
     featured: false,
-    gridClass: "col-span-1 row-span-1",
+    gridClass: "",
     year: "2023",
   },
 ];
@@ -164,7 +164,7 @@ function ProjectCard({ project }: ProjectCardProps) {
           </div>
 
           <p className="text-foreground-secondary mb-4 leading-relaxed">
-            {project.featured ? project.longDescription : project.description}
+            {project.description}
           </p>
 
           <div className="flex flex-wrap gap-2">

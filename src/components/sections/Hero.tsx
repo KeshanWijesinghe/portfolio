@@ -56,94 +56,91 @@ export function Hero() {
 
       <div className="w-full max-w-6xl mx-auto relative z-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-16">
         {/* Left — Text content */}
-        <motion.div
-          className="flex-1"
-          initial="hidden"
-          animate="visible"
-        >
-        <StaggerContainer className="text-center lg:text-left">
-          <StaggerItem>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 tracking-tight">
-              <span className="block text-foreground">Undergraduate</span>
-              <span className="block gradient-text">Software Engineer</span>
-            </h1>
-          </StaggerItem>
+        <motion.div className="flex-1" initial="hidden" animate="visible">
+          <StaggerContainer className="text-center lg:text-left">
+            <StaggerItem>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 tracking-tight">
+                <span className="block text-foreground">Undergraduate</span>
+                <span className="block gradient-text">Software Engineer</span>
+              </h1>
+            </StaggerItem>
 
-          <StaggerItem>
-            <p className="text-lg sm:text-xl lg:text-2xl text-foreground-secondary mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              I craft exceptional digital experiences through{" "}
-              <span className="text-accent-primary font-medium">
-                modern web technologies
-              </span>
-              ,{" "}
-              <span className="text-accent-secondary font-medium">
-                thoughtful design
-              </span>
-              , and{" "}
-              <span className="text-accent-tertiary font-medium">
-                performance optimization
-              </span>
-              .
-            </p>
-          </StaggerItem>
+            <StaggerItem>
+              <p className="text-lg sm:text-xl lg:text-2xl text-foreground-secondary mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                I craft exceptional digital experiences through{" "}
+                <span className="text-accent-primary font-medium">
+                  modern web technologies
+                </span>
+                ,{" "}
+                <span className="text-accent-secondary font-medium">
+                  thoughtful design
+                </span>
+                , and{" "}
+                <span className="text-accent-tertiary font-medium">
+                  performance optimization
+                </span>
+                .
+              </p>
+            </StaggerItem>
 
-          <StaggerItem>
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 mb-12">
-              <motion.button
-                onClick={scrollToProjects}
-                className="btn-primary group relative"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="relative z-10">View My Work</span>
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-accent-primary/20 to-accent-secondary/20 rounded-2xl"
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
-                />
-              </motion.button>
+            <StaggerItem>
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 mb-12">
+                <motion.button
+                  onClick={scrollToProjects}
+                  className="btn-primary group relative"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span className="relative z-10">View My Work</span>
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-accent-primary/20 to-accent-secondary/20 rounded-2xl"
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </motion.button>
 
-              <motion.a
-                href="/resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary group"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Download Resume
-              </motion.a>
-            </div>
-          </StaggerItem>
-
-          <StaggerItem>
-            <div className="flex items-center justify-center lg:justify-start gap-6">
-              {socialLinks.map((link) => (
                 <motion.a
-                  key={link.href}
-                  href={link.href}
+                  href="/resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="glass-card p-4 hover:bg-glass-border transition-colors group"
-                  whileHover={{
-                    scale: 1.1,
-                    rotate: [0, -10, 10, 0],
-                  }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 400,
-                    damping: 10,
-                    rotate: { duration: 0.6 },
-                  }}
-                  aria-label={link.label}
+                  className="btn-primary group"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  <link.icon className="w-5 h-5 text-foreground-secondary group-hover:text-accent-primary transition-colors" />
+                  Download Resume
                 </motion.a>
-              ))}
-            </div>
-          </StaggerItem>
-        </StaggerContainer>        </motion.div>
+              </div>
+            </StaggerItem>
+
+            <StaggerItem>
+              <div className="flex items-center justify-center lg:justify-start gap-6">
+                {socialLinks.map((link) => (
+                  <motion.a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="glass-card p-4 hover:bg-glass-border transition-colors group"
+                    whileHover={{
+                      scale: 1.1,
+                      rotate: [0, -10, 10, 0],
+                    }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 10,
+                      rotate: { duration: 0.6 },
+                    }}
+                    aria-label={link.label}
+                  >
+                    <link.icon className="w-5 h-5 text-foreground-secondary group-hover:text-accent-primary transition-colors" />
+                  </motion.a>
+                ))}
+              </div>
+            </StaggerItem>
+          </StaggerContainer>{" "}
+        </motion.div>
         {/* Right — Photo */}
         <motion.div
           className="flex-shrink-0 flex items-end justify-center w-64 sm:w-72 lg:w-80 xl:w-96"
