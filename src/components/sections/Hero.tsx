@@ -16,17 +16,17 @@ export function Hero() {
   const socialLinks = [
     {
       icon: Github,
-      href: "https://github.com/yourusername",
+      href: "https://github.com/KeshanWijesinghe",
       label: "GitHub Profile",
     },
     {
       icon: Linkedin,
-      href: "https://linkedin.com/in/yourusername",
+      href: "https://www.linkedin.com/in/keshanwijesinghe",
       label: "LinkedIn Profile",
     },
     {
       icon: Mail,
-      href: "mailto:your.email@example.com",
+      href: "mailto:wijesinghe.kbhanuka@gmail.com",
       label: "Send Email",
     },
   ];

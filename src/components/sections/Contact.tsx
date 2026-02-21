@@ -25,19 +25,19 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "your.email@example.com",
-    href: "mailto:your.email@example.com",
+    value: "wijesinghe.kbhanuka@gmail.com",
+    href: "mailto:wijesinghe.kbhanuka@gmail.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
+    value: "+94 (777) 163869",
+    href: "tel:+94777163869",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "San Francisco, CA",
+    value: "Gaelle, Sri Lanka",
     href: "#",
   },
 ];
@@ -45,6 +45,7 @@ const contactInfo = [
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const {
     register,
@@ -57,17 +58,33 @@ export function Contact() {
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
+    setSubmitError(null);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
 
-    console.log("Form submitted:", data);
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    reset();
+      const result = await res.json();
 
-    // Reset success message after 3 seconds
-    setTimeout(() => setIsSubmitted(false), 3000);
+      if (!res.ok) {
+        throw new Error(result.error || "Failed to send message.");
+      }
+
+      setIsSubmitted(true);
+      reset();
+      setTimeout(() => setIsSubmitted(false), 5000);
+    } catch (err: unknown) {
+      setSubmitError(
+        err instanceof Error
+          ? err.message
+          : "Something went wrong. Please try again.",
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -236,6 +253,19 @@ export function Contact() {
                     >
                       <p className="text-green-400 text-sm text-center">
                         ✅ Message sent successfully! I'll get back to you soon.
+                      </p>
+                    </motion.div>
+                  )}
+
+                  {/* Error Message */}
+                  {submitError && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="p-4 bg-red-500/10 border border-red-500/20 rounded-xl"
+                    >
+                      <p className="text-red-400 text-sm text-center">
+                        ❌ {submitError}
                       </p>
                     </motion.div>
                   )}

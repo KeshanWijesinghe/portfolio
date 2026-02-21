@@ -253,7 +253,7 @@ export function Projects() {
           <StaggerItem>
             <div className="text-center mt-16">
               <motion.a
-                href="https://github.com/yourusername"
+                href="https://github.com/KeshanWijesinghe"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary group inline-flex items-center gap-2"
