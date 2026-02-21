@@ -4,6 +4,7 @@ import { TechStack } from "@/components/sections/TechStack";
 import { Projects } from "@/components/sections/Projects";
 import { Contact } from "@/components/sections/Contact";
 import { Navigation } from "@/components/ui/Navigation";
+import { Footer } from "@/components/ui/Footer";
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
         <Projects />
         <Contact />
       </main>
+      <Footer />
     </>
   );
 }
