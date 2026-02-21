@@ -95,6 +95,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#0a0a0a" />
       </head>
       <body
+        suppressHydrationWarning
         className={cn(
           geistSans.variable,
           "font-sans antialiased overflow-x-hidden",
