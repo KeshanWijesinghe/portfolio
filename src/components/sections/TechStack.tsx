@@ -44,7 +44,7 @@ const skills = [
   { name: "Tailwind CSS", Icon: SiTailwindcss, color: "#06B6D4" },
   { name: "HTML5", Icon: SiHtml5, color: "#E34F26" },
   { name: "CSS3", Icon: SiCss3, color: "#1572B6" },
-  { name: "React Native", Icon: SiReact, color: "#61DAFB" },
+  { name: "React", Icon: SiReact, color: "#61DAFB" },
   { name: "PHP", Icon: SiPhp, color: "#777BB4" },
   { name: "Python", Icon: SiPython, color: "#3776AB" },
   { name: "Django", Icon: SiDjango, color: "#092E20" },
