@@ -119,8 +119,14 @@ export function Hero() {
                   <motion.a
                     key={link.href}
                     href={link.href}
-                    target={link.href.startsWith("mailto:") ? "_self" : "_blank"}
-                    rel={link.href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+                    target={
+                      link.href.startsWith("mailto:") ? "_self" : "_blank"
+                    }
+                    rel={
+                      link.href.startsWith("mailto:")
+                        ? undefined
+                        : "noopener noreferrer"
+                    }
                     className="glass-card p-4 hover:bg-glass-border transition-colors group"
                     whileHover={{
                       scale: 1.1,
