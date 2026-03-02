@@ -34,7 +34,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center section-padding overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center section-padding overflow-hidden pt-24 pb-24 lg:pt-0 lg:pb-0"
     >
       {/* Animated gradient background */}
       <motion.div
@@ -54,7 +54,7 @@ export function Hero() {
         }}
       />
 
-      <div className="w-full max-w-6xl mx-auto relative z-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-16">
+      <div className="w-full max-w-6xl mx-auto relative z-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-16">
         {/* Left — Text content */}
         <motion.div className="flex-1" initial="hidden" animate="visible">
           <StaggerContainer className="text-center lg:text-left">
