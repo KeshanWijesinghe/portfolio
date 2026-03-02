@@ -39,11 +39,17 @@ export function Navigation() {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
     setIsOpen(false);
+    // Small delay lets the menu close before scrolling so the nav height is stable
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const navHeight = 80; // approx fixed nav height in px
+        const top =
+          section.getBoundingClientRect().top + window.scrollY - navHeight;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+    }, 50);
   };
 
   return (
