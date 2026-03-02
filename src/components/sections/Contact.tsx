@@ -115,14 +115,16 @@ export function Contact() {
                   whileHover={{ x: 8 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
-                  <div className="p-3 bg-accent-primary/10 rounded-2xl group-hover:bg-accent-primary/20 transition-colors">
+                  <div className="flex-shrink-0 p-3 bg-accent-primary/10 rounded-2xl group-hover:bg-accent-primary/20 transition-colors">
                     <info.icon className="w-5 h-5 text-accent-primary" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-sm text-foreground-tertiary">
                       {info.label}
                     </p>
-                    <p className="text-foreground font-medium">{info.value}</p>
+                    <p className="text-foreground font-medium break-all">
+                      {info.value}
+                    </p>
                   </div>
                 </motion.a>
               </StaggerItem>
@@ -132,7 +134,7 @@ export function Contact() {
           {/* Contact Form */}
           <div className="lg:col-span-2">
             <StaggerItem direction="right">
-              <div className="glass-card p-8">
+              <div className="glass-card p-4 sm:p-6 lg:p-8">
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                   {/* Name and Email Row */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

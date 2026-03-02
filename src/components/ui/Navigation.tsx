@@ -133,7 +133,7 @@ export function Navigation() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                YN
+                KW
               </motion.button>
 
               {/* Menu Toggle */}
@@ -176,11 +176,12 @@ export function Navigation() {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              className="absolute top-full left-0 right-0 glass bg-background/95 backdrop-blur-xl border-b border-glass-border"
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
+              className="absolute top-full left-0 right-0 glass bg-background/95 backdrop-blur-xl border-b border-glass-border origin-top"
+              initial={{ opacity: 0, scaleY: 0 }}
+              animate={{ opacity: 1, scaleY: 1 }}
+              exit={{ opacity: 0, scaleY: 0 }}
+              transition={{ duration: 0.25, ease: "easeInOut" }}
+              style={{ transformOrigin: "top" }}
             >
               <div className="section-padding py-8">
                 <div className="space-y-6">

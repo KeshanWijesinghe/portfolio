@@ -95,7 +95,7 @@ export function About() {
           </div>
 
           {/* Highlights Grid */}
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {highlights.map((highlight) => (
               <StaggerItem key={highlight.title} direction="right">
                 <motion.div

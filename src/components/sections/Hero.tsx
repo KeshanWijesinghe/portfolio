@@ -149,7 +149,7 @@ export function Hero() {
         </motion.div>
         {/* Right — Photo */}
         <motion.div
-          className="flex-shrink-0 flex items-end justify-center w-64 sm:w-72 lg:w-80 xl:w-96"
+          className="flex-shrink-0 flex items-end justify-center w-48 sm:w-64 lg:w-80 xl:w-96"
           initial={{ opacity: 0, x: 60 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}

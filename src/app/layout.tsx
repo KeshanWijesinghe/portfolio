@@ -99,6 +99,7 @@ export default function RootLayout({
           geistSans.variable,
           "font-sans antialiased overflow-x-hidden",
         )}
+        suppressHydrationWarning
       >
         <div className="relative min-h-screen bg-gradient-mesh">
           <div className="absolute inset-0 bg-background/90" />
